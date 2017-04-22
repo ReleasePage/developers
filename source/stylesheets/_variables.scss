@@ -23,31 +23,34 @@ under the License.
 
 // BACKGROUND COLORS
 ////////////////////
-$nav-bg: #393939;
-$examples-bg: #393939;
-$code-bg: #292929;
-$code-annotation-bg: #1c1c1c;
-$nav-subitem-bg: #262626;
-$nav-active-bg: #2467af;
+$nav-bg: #247BA0;
+$examples-bg: #2d3134;
+$code-bg: #272b2d;
+$code-annotation-bg: #2d3134;
+$nav-subitem-bg: #247BA0;
+$nav-active-bg: #247BA0;
+
 $lang-select-border: #000;
 $lang-select-bg: #222;
 $lang-select-active-bg: $examples-bg; // feel free to change this to blue or something
 $lang-select-pressed-bg: #111; // color of language tab bg when mouse is pressed
-$main-bg: #eaf2f6;
-$aside-notice-bg: #8fbcd4;
-$aside-warning-bg: #c97a7e;
-$aside-success-bg: #6ac174;
-$search-notice-bg: #c97a7e;
+
+$main-bg: #fff;
+$aside-notice-bg: #E6E6E6;
+$aside-warning-bg: #F25F5C;
+$aside-success-bg: #70C1B3;
+$search-notice-bg: #FFE066;
 
 
 // TEXT COLORS
 ////////////////////
-$main-text: #333; // main content text color
+$main-text: #50514F; // main content text color
 $nav-text: #fff;
 $nav-active-text: #fff;
-$lang-select-text: #fff; // color of unselected language tab text
-$lang-select-active-text: #fff; // color of selected language tab text
-$lang-select-pressed-text: #fff; // color of language tab text when mouse is pressed
+
+$lang-select-text: #50514F; // color of unselected language tab text
+$lang-select-active-text: #50514F; // color of selected language tab text
+$lang-select-pressed-text: #50514F; // color of language tab text when mouse is pressed
 
 
 // SIZES
@@ -65,15 +68,28 @@ $tablet-width: 930px; // min width before reverting to tablet size
 $phone-width: $tablet-width - $nav-width; // min width before reverting to mobile size
 
 
+@font-face {
+  font-family: 'GothamRound';
+  // src: url('../fonts/gothic-rounded/GothamRounded-Bold.otf') format('otf');
+  src: url('//cdn.releasepage.co/fonts/gothic-rounded/GothamRoundedLight_21020.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'GothamRound-Book';
+  // src: url('../fonts/gothic-rounded/GothamRounded-Bold.otf') format('otf');
+  src: url('//cdn.releasepage.co/fonts/gothic-rounded/GothamRoundedMedium_21022.ttf') format('truetype');
+}
+
+
 // FONTS
 ////////////////////
 %default-font {
-  font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
-  font-size: 13px;
+  font-family: "GothamRound", Helvetica, Arial, "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
+  font-size: 14px;
 }
 
 %header-font {
-  @extend %default-font;
+  font-family: "GothamRound-Book", Helvetica, Arial, "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
   font-weight: bold;
 }
 
@@ -86,12 +102,12 @@ $phone-width: $tablet-width - $nav-width; // min width before reverting to mobil
 
 // OTHER
 ////////////////////
-$nav-active-shadow: #000;
-$nav-footer-border-color: #666;
-$nav-embossed-border-top: #000;
-$nav-embossed-border-bottom: #939393;
-$main-embossed-text-shadow: 0px 1px 0px #fff;
-$search-box-border-color: #666;
+$nav-active-shadow: transparent;
+$nav-footer-border-color: #fff;
+$nav-embossed-border-top: transparent;
+$nav-embossed-border-bottom: transparent;
+$main-embossed-text-shadow: 0px 1px 0px transparent;
+$search-box-border-color: #fff;
 
 
 ////////////////////////////////////////////////////////////////////////////////

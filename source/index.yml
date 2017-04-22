@@ -1,18 +1,15 @@
-title: API Reference
+title: ReleasePage API
 
 language_tabs:
   - bash
-  - ruby
-  - python
-  - javascript
 
 toc_footers:
-  - <a href='#'>Sign Up for a Developer Key</a>
-  - <a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a>
+  - <a href='https://manage.releasepage.co'>Sign Up for an API Key</a>
+  - <span class="muted">Documentation Powered by <a href='https://github.com/tripit/slate'>Slate</a></span>
 
 includes:
   - main
-  - _errors
+  - _versions
 
 search: true
 

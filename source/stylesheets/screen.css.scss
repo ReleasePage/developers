@@ -35,6 +35,28 @@ html, body {
   -webkit-text-size-adjust: none; /* Never autoresize text */
 }
 
+$color-yellow: #FFE066;
+
+
+pre.highlight.bash:before {
+  content: "$ ";
+  opacity: 0.4;
+}
+
+.logo {
+  margin-top: 1rem;
+  text-align: center;
+  color: $nav-text;
+  img {
+    width: 50px;
+  }
+}
+
+.demo-image {
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1)
+}
+
 ////////////////////////////////////////////////////////////////////////////////
 // TABLE OF CONTENTS
 ////////////////////////////////////////////////////////////////////////////////
@@ -152,6 +174,15 @@ html, body {
     overflow-x: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+
+  }
+
+  .tocify-item > a {
+    border-bottom: 1px solid transparent;
+  }
+
+  .tocify-hover > a, .tocify-focus > a {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   // The Table of Contents is composed of multiple nested
@@ -190,7 +221,7 @@ html, body {
     }
 
     // for embossed look:
-    @include embossed-bg;
+    // @include embossed-bg;
     &>li:last-child {
       box-shadow: none; // otherwise it'll overflow out of the subheader
     }
@@ -328,6 +359,19 @@ html, body {
   position: relative;
   z-index: 30;
 
+  a {
+    color: #50514F;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 100ms ease-in-out;
+    border-bottom: 1px dotted darken($color-yellow, 30%);
+
+    &:hover {
+      color: darken($color-yellow, 30%);
+      text-decoration: none;
+    }
+  }
+
   &:after {
     content: '';
     display: block;
@@ -349,7 +393,7 @@ html, body {
   }
 
   // the div is the tocify hidden div for placeholding stuff
-  &>h1, &>h2, &>div {
+  &>h1 {
     clear:both;
   }
 
@@ -515,6 +559,9 @@ html, body {
   }
 }
 
+.muted {
+  opacity: 0.5;
+}
 ////////////////////////////////////////////////////////////////////////////////
 // CODE SAMPLE STYLES
 ////////////////////////////////////////////////////////////////////////////////
@@ -522,10 +569,10 @@ html, body {
 
 .content {
   pre, blockquote {
-    background-color: $code-bg;
+    background-color: $examples-bg;
     color: #fff;
 
-    padding: 2em $main-padding;
+    padding: 1em $main-padding;
     margin: 0;
     width: $examples-width;
 
@@ -548,16 +595,17 @@ html, body {
 
   pre {
     @extend %code-font;
+    background-color: #272b2d;
   }
 
   blockquote {
     &>p {
       background-color: $code-annotation-bg;
-      border-radius: 5px;
-      padding: $code-annotation-padding;
-      color: #ccc;
-      border-top: 1px solid #000;
-      border-bottom: 1px solid #404040;
+      // border-radius: 5px;
+      // padding: $code-annotation-padding;
+      color: #fff;
+      // border-top: 1px solid #000;
+      // border-bottom: 1px solid #404040;
     }
   }
 }
@@ -625,3 +673,5 @@ html, body {
 .highlight, .highlight .w {
   background-color: $code-bg;
 }
+
+@import './lang';

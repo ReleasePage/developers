@@ -86,6 +86,7 @@ gulp.task('js', function() {
   var scripts = [
     './source/javascripts/app/_lang.js',
     './source/javascripts/app/_toc.js',
+    './source/javascripts/app/_scripts.js',
   ];
 
   if (config.search) {
