@@ -65,9 +65,10 @@ Date: Sat, 22 Apr 2017 07:13:56 GMT
 Content-Type: application/json; charset=utf-8
 ...
 {
-  "error": "key_invalid",
+  "error": "key-invalid",
   "error_description": "The client API key is invalid",
-  "error_uri": "https://developers.releasepage.co/#authentication"
+  "error_uri": "https://developers.releasepage.co/#authentication",
+  "error_causes": [{ "field": "apiKey", "error": "invalid" }]
 }
 ```
 
@@ -75,6 +76,7 @@ The API will always return a JSON interpretation of the error.
 
 In the case of a API key not having access to a resource, such as requesting a Release Page that belongs to a different user, then the API will always return a `404 Not found`, rather than a `403 Forbidden`. This is a preventative measure to avoid exposing any underlying private information.
 
+`error_causes` will be present if there are specific reasons that the request has failed, such as required fields being missing.
 
 
 # Authentication

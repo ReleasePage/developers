@@ -59,5 +59,5 @@ The ID of the requested Release Page. You can find this value on the API panel o
 
 The response will always contain a `latest` array, containing the latest release of each repository defined in the specified Release Page.
 
-In the case of a Release Page with `grouped` releases, the response will also include a `latestGrouped` block. This will show the latest grouped version of the Release Page, including the repositories and authors that contributed to that grouped release,
+In the case of a Release Page with `grouped` releases, the response will also include a `latestGrouped` block. This will show the latest grouped version of the Release Page, including the repositories and authors that contributed to that grouped release.
 
